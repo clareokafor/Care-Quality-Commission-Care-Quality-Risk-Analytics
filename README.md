@@ -205,15 +205,15 @@ The purpose of the project is not only to show ratings, but to demonstrate how i
 
 ### Overall Quality and Risk by Region
 
-![Overall Quality and Risk by Region](images/quality-overview.png)
+![Overall Quality and Risk by Region](quality-overview.png)
 
 ### Domain-Level Quality and Risk
 
-![Domain-Level Quality and Risk](images/domain-quality.png)
+![Domain-Level Quality and Risk](domain-quality.png)
 
 ### Local Authority Performance
 
-![Local Authority Performance](images/authority-quality.png)
+![Local Authority Performance](authority-quality.png)
 
 ## Live Dashboard
 
