@@ -235,6 +235,6 @@ You are free to use, modify and distribute the code and materials in this reposi
 
 See the full license here:
 
-[LICENSE](https://github.com/clareokafor/cqc-care-quality-risk-analytics/blob/main/LICENSE)
+[LICENSE](LICENSE.txt)
 
 ---
