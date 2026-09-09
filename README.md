@@ -1,163 +1,240 @@
-# Care-Quality-Commission-Care-Quality-Risk-Analytics
+# Care Quality Commission – Care Quality & Risk Analytics
 
-This project uses publicly available Care Quality Commission (CQC) inspection and ratings data to explore care quality, identify areas that may need attention, and compare performance across regions, local authorities, service types and inspection domains.
+## Overview
 
-The aim was to show how inspection data can be used to understand quality in care services, identify potential risks early, and support better decisions for people who use care services.
+This project uses publicly available **Care Quality Commission (CQC)** inspection and ratings data to explore the quality of care services across England.
 
-Live Power BI Dashboard
+The aim of the project was to show how inspection data can be used to understand service quality, identify areas that may need attention, compare performance across locations, and support better decision-making.
 
-Explore the interactive Power BI dashboard
+I used **Python** for the initial data collection and cleaning, then used **Power Query in Power BI** for further transformation and merging of the datasets before building the final interactive reports.
 
-Tools Used
+## Data Source and Scope
 
-Python
+The project uses publicly available datasets from the **Care Quality Commission of England**, focusing on care service directories and inspection ratings.
 
-Power BI
+The main fields used in the analysis include:
 
-Power Query
+- Overall ratings
+- Service type
+- Inspection domains
+- Region
+- Local authority
+- Publication dates
 
-CSV
+The CQC datasets were used because they provide structured information on the quality and performance of care services and are useful for demonstrating how inspection data can support risk monitoring and service improvement.
 
-Data cleaning and validation
+## Data Preparation
 
-Data visualisation
+The data preparation process was carried out in two stages.
 
-Exploratory data analysis
+### Python
 
-Data Source and Scope
+Python was used to:
 
-I used publicly available CQC datasets covering the England care provider directory and inspection ratings. I focused on fields such as:
+- Collect and load the datasets.
+- Remove duplicate records.
+- Remove inactive services.
+- Remove services without ratings.
+- Check and clean inconsistent records.
+- Keep the required fields for analysis.
+- Save the cleaned datasets as CSV files.
 
-Overall ratings
+### Power Query
 
-Service type
+After the initial cleaning in Python, Power Query was used in Power BI to:
 
-Inspection domains
+- Carry out further data cleaning.
+- Standardise fields across the datasets.
+- Check data types and consistency.
+- Merge the directory and ratings datasets.
+- Prepare the final dataset for analysis and reporting.
 
-Region
+The aim was to keep a consistent and reliable dataset for the final reports.
 
-Local authority
+## Dashboard 1 – Overall Quality and Risk by Region
 
-Publication dates
+The first report gives an overall view of how care services are performing.
 
-These fields were selected to support comparisons of care quality and risk across different parts of the system.
+The dashboard shows the distribution of services across the four main rating categories:
 
-Data Preparation
+- Outstanding
+- Good
+- Requires Improvement
+- Inadequate
 
-I used Python to prepare the source datasets before analysis. This included:
+The analysis showed that:
 
-Removing inactive services
+- **548 services** were rated Outstanding.
+- **6,376 services** were rated Good.
+- **1,378 services** were rated Requires Improvement.
+- **67 services** were rated Inadequate.
+- Around **82.73%** of services were rated Outstanding or Good.
+- Around **17.27%** of services were rated Requires Improvement or Inadequate.
 
-Removing unrated services
+The report also compares risk across regions.
 
-Removing duplicates
+The **South East** had the highest number of services requiring attention, with:
 
-Checking and removing inconsistent records
+- **241 services** rated Requires Improvement.
+- **17 services** rated Inadequate.
 
-Keeping consistent definitions across datasets
+The regional percentage table also showed that the South East had approximately:
 
-Exporting the cleaned datasets as CSV files
+- **16.68%** of services rated Requires Improvement.
+- **1.18%** rated Inadequate.
 
-I then used Power Query in Power BI for further cleaning and transformation before merging the datasets into the reporting model.
+This report helps show where lower-performing services are more concentrated.
 
-Dashboard Overview
+## Dashboard 2 – Domain-Level Quality and Risk
 
-1. Quality Overview
+The second report looks at performance across individual inspection domains.
 
+The domains analysed include:
 
+- Caring
+- Effective
+- Overall
+- Responsive
+- Safe
+- Well-led
 
-This report provides a high-level view of the inspection ratings and where services needing attention are concentrated.
+The dashboard shows how services were rated within each domain and also compares performance across local authorities.
 
-Key findings:
+One of the main findings was that:
 
-8,369 services were included in the analysed view.
+- **5,209 services** were rated Good in the Safe domain.
+- Only **6 services** were rated Inadequate in the Effective domain.
 
-82.73% of services were rated Outstanding or Good.
+The report also includes a matrix showing the top local authorities with higher concentrations of risk across different domains.
 
-17.27% were rated Requires Improvement or Inadequate.
+Another part of the report compares the percentage of services needing attention with those rated Outstanding or Good.
 
-The largest number of services needing attention was in the South East, with 241 rated Requires Improvement and 17 rated Inadequate.
+For services needing attention, the highest concentrations were:
 
-The regional percentage table also shows how risk differs across England rather than being spread evenly.
+- Well-led – **41.72%**
+- Overall – **36.96%**
+- Effective – **23.74%**
+- Responsive – **22.03%**
+- Safe – **12.91%**
+- Caring – **12.56%**
 
-2. Domain-Level Quality and Risk
+For services rated Outstanding or Good, the strongest areas were:
 
+- Caring – **87.44%**
+- Safe – **87.09%**
+- Responsive – **77.97%**
+- Effective – **76.26%**
+- Overall – **63.04%**
+- Well-led – **58.28%**
 
+This shows that performance can vary significantly depending on the inspection domain.
 
-This report looks at ratings across the different inspection domains and highlights where risk is concentrated.
+## Dashboard 3 – Local Authority Performance
 
-Key findings:
+The third report compares the performance of local authorities.
 
-The Safe domain had the largest number of Good ratings, with 5,209 services rated Good.
+The dashboard includes the top-performing authorities as well as authorities with a higher proportion of services needing attention.
 
-The dashboard shows variation across Caring, Effective, Responsive, Safe, Well-led and Overall ratings.
+Some of the authorities with strong performance included:
 
-The risk concentration table highlights the local authorities where Requires Improvement and Inadequate ratings are concentrated by domain.
+- Kent
+- Lancashire
+- Essex
+- Hampshire
+- Surrey
+- West Sussex
+- Hertfordshire
+- Devon
+- Gloucestershire
+- East Sussex
 
-Among the displayed domain percentages, Well-led had the highest share of services needing attention at 41.72%.
+The report also compares the proportion of services rated Outstanding or Good with those rated Requires Improvement or Inadequate.
 
-Caring had the highest displayed Outstanding/Good percentage at 87.44%, followed closely by Safe at 87.09%.
+The authority risk profile shows that some local authorities had a much higher proportion of services needing attention than others.
 
-3. Authority Performance and Benchmarking
+For example:
 
+- Isles of Scilly – **100%**
+- Slough – **50%**
+- Wolverhampton – **45.71%**
+- Tameside – **37.04%**
+- Walsall – **35.48%**
 
+The report helps make it easier to compare local authorities and identify where closer attention may be required.
 
-This report compares local authorities by performance and risk.
+## Key Findings
 
-Key findings:
+The analysis showed that:
 
-The table shows the top local authorities by counts of Outstanding, Good, Requires Improvement and Inadequate ratings.
+- Most care services were rated **Good or Outstanding**.
+- A smaller proportion of services were rated **Requires Improvement or Inadequate**.
+- Risk was concentrated in a smaller group of services and locations.
+- Quality patterns varied across regions, local authorities and inspection domains.
+- Some domains performed better than others.
+- Some local authorities had noticeably higher proportions of services needing attention.
 
-Kent had 15 Outstanding, 218 Good, 37 Requires Improvement and 8 Inadequate ratings in the displayed view.
+## Why Inspection Data Matters
 
-The benchmarking charts compare the share of services performing well with the share needing attention.
+Inspection data can be useful for understanding how care services are performing and where problems may be developing.
 
-In the displayed risk profile, Leicester had 70.21% Outstanding/Good, while Isles of Scilly showed 100% Services Needing Attention in the selected view.
+It can help to:
 
-These comparisons help show that overall performance can look strong while risk remains concentrated in particular authorities.
+- Identify potential risks earlier.
+- Compare service quality across locations.
+- Highlight areas that may need additional inspection or support.
+- Support fairer allocation of resources.
+- Improve transparency.
+- Support evidence-based decision-making.
 
-Main Takeaways
+The purpose of the project is not only to show ratings, but to demonstrate how inspection data can be turned into useful information for understanding care quality and supporting better outcomes for people who use care services.
 
-Most services in the analysed data met expected standards.
+## Tools Used
 
-Risk was concentrated in a smaller group of services rather than spread evenly across the system.
+- **Python**
+- **Pandas**
+- **Power BI**
+- **Power Query**
+- **DAX**
+- **CSV**
+- **Data Cleaning**
+- **Data Transformation**
+- **Data Visualisation**
+- **Exploratory Data Analysis**
 
-Quality and risk patterns varied by region, local authority, service type and inspection domain.
+## Dashboard Preview
 
-Inspection data can help identify where closer attention may be needed and support more targeted use of regulatory resources.
+### Overall Quality and Risk by Region
 
-Clear and consistent data preparation is important before drawing conclusions from inspection data.
+![Overall Quality and Risk by Region](images/quality-overview.png)
 
-Why This Matters
+### Domain-Level Quality and Risk
 
-Inspection data can support better decisions by helping organisations:
+![Domain-Level Quality and Risk](images/domain-quality.png)
 
-Identify potential risk earlier
+### Local Authority Performance
 
-Target inspections and support more effectively
+![Local Authority Performance](images/authority-quality.png)
 
-Compare performance across locations and service types
+## Live Dashboard
 
-Improve transparency
+[**View the interactive Power BI dashboard**](https://app.powerbi.com/view?r=eyJrIjoiMDliNWE5ZmEtNTQ0NC00MmEwLTgxYzUtNzA3ZDM0ZDI4NDI3IiwidCI6ImYyMDIxN2JmLWEwYzYtNDZlNi1hMTdmLTY3YzkwNTY0NDgwZiJ9)
 
-Direct attention and resources to areas where they may have the greatest impact
+## Key Takeaway
 
-The wider goal of the project is to show how data can support better outcomes for people who experience care.
+Most services in the dataset were performing well, but the analysis also showed that quality and risk were not evenly distributed.
 
-Repository Structure
+Looking at ratings by region, local authority and inspection domain makes it easier to identify where problems are concentrated rather than relying only on the overall national picture.
 
-cqc-care-quality-risk-analytics/
-│
-├── README.md
-├── images/
-│   ├── quality-overview.png
-│   ├── domain-quality.png
-│   └── authority-quality.png
-│
-├── data/                # Add raw/cleaned datasets if suitable for sharing
-├── notebooks/           # Add Python cleaning/analysis notebook
-└── powerbi/             # Add .pbix file if you want to share it
+Good quality data supports better decisions, and inspection data can play an important role in improving transparency, identifying risk and supporting better outcomes in care services.
 
-Notes
+## License
 
-This is an independent portfolio project using publicly available CQC data. It is intended to demonstrate data cleaning, analysis, visualisation and interpretation skills and is not an official CQC publication.
+This project is licensed under the **MIT License**.
+
+You are free to use, modify and distribute the code and materials in this repository, provided the original copyright and license notice are included.
+
+See the full license here:
+
+[LICENSE](https://github.com/clareokafor/cqc-care-quality-risk-analytics/blob/main/LICENSE)
+
+---
